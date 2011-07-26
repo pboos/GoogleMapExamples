@@ -1,0 +1,9 @@
+/bin
+/doc
+/gen
+/reports
+/tests/bin
+/tests/gen
+/tests/reports
+/tests/coverage
+/proguard

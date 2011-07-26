@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:orientation="vertical" android:layout_width="fill_parent"
+	android:layout_height="fill_parent">
+	<Button android:id="@+id/button_map_url" android:layout_height="wrap_content"
+		android:text="Open Map (Intent with map url)" android:layout_width="fill_parent" />
+	<Button android:layout_height="wrap_content" android:id="@+id/button_map_loc"
+		android:text="Open Map (Intent with geo)" android:layout_width="fill_parent" />
+	<Button android:layout_height="wrap_content" android:id="@+id/button_show_image"
+		android:text="Show Map (Image)" android:layout_width="fill_parent" />
+	<Button android:layout_height="wrap_content" android:id="@+id/button_show_mapview"
+		android:text="Show Map (MapView)" android:layout_width="fill_parent" />
+	<RelativeLayout android:layout_width="fill_parent"
+		android:id="@+id/relativeLayout1" android:layout_height="fill_parent"
+		android:layout_weight="1">
+		<ImageView android:layout_height="wrap_content" android:src="@drawable/icon"
+			android:layout_width="wrap_content" android:layout_centerVertical="true"
+			android:layout_centerHorizontal="true" android:id="@+id/image_map"
+			android:visibility="gone" />
+		<ProgressBar style="?android:attr/progressBarStyleLarge"
+			android:layout_height="wrap_content" android:layout_width="wrap_content"
+			android:layout_centerVertical="true" android:layout_centerHorizontal="true"
+			android:id="@+id/progress" android:visibility="gone" />
+		<com.google.android.maps.MapView
+			android:id="@+id/mapview" android:layout_width="fill_parent"
+			android:layout_height="fill_parent" android:clickable="true"
+			android:apiKey="0y1T9ys7F8EjCDDT7zpKHd0hgzCWezwbZowqhHg"
+			android:visibility="gone" />
+	</RelativeLayout>
+</LinearLayout>
