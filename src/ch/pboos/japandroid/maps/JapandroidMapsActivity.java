@@ -98,7 +98,10 @@ public class JapandroidMapsActivity extends MapActivity implements OnClickListen
 
     private void openMapGeo(String latitude, String longitude) {
         Intent intent2 = new Intent(Intent.ACTION_VIEW, Uri.parse("geo:" + latitude + ","
-                + longitude + "?z=17"));
+                + longitude + "?z=17&q=" + latitude + "," + longitude));
+        // replace the q with a search string works too. Example:
+        // intent2 = new Intent(Intent.ACTION_VIEW,
+        // Uri.parse("geo:0,0?q=Tonchidot"));
         startActivity(intent2);
     }
 
